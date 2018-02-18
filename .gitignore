@@ -1,0 +1,34 @@
+# RAILS
+
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+.byebug_history
+
+# REACT
+
+# dependencies
+**/node_modules
+
+# testing
+**/coverage
+
+# production
+**/build
+
+# misc
+*.DS_Store
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*

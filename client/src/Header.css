@@ -1,0 +1,14 @@
+.navbar {
+  background-color: black;
+  width: 100%;
+  color: white;
+}
+
+.center {
+  margin: auto;
+}
+
+label.toilet-label {
+  width: 6em;
+  text-align: left;
+}
