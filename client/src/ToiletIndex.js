@@ -37,13 +37,13 @@ class ToiletIndex extends Component {
           onClick={obj.handleToggle.bind(this, index)}/>
       )
     });
-    return <ListGroup>{listItems}</ListGroup>;
+    return <ListGroup id="toilet-list">{listItems}</ListGroup>;
   }
 
 }
 
 function ToiletElement(props) {
-  const imgURL = `https://maps.googleapis.com/maps/api/staticmap?markers=color:red%7C${props.toilet.coords.latitude},${props.toilet.coords.longitude}&markers=color:green%7C${props.currentCoords.latitude},${props.currentCoords.longitude}&size=400x400&scale=2&key=AIzaSyBHyQP8xlcgazFtPSs6CuP776FnUYFVAXc`;
+  const imgURL = `https://maps.googleapis.com/maps/api/staticmap?markers=color:red%7C${props.toilet.lat},${props.toilet.lng}&markers=color:green%7C${props.currentCoords.latitude},${props.currentCoords.longitude}&size=400x400&scale=2&key=AIzaSyBHyQP8xlcgazFtPSs6CuP776FnUYFVAXc`;
   return (
     <ListGroupItem active={props.active}
       onClick={props.onClick}>

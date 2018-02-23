@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180218155443) do
+ActiveRecord::Schema.define(version: 20180223004754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "reviews", force: :cascade do |t|
     t.bigint "toilet_id"
-    t.string "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "rating"
     t.index ["toilet_id"], name: "index_reviews_on_toilet_id"
   end
 

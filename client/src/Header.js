@@ -48,6 +48,7 @@ class ToiletForm extends Component {
       name: '',
       description: '',
       rating: 5,
+      toilet_type: 5,
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -66,19 +67,28 @@ class ToiletForm extends Component {
   render() {
     return (
       <form className="toilet-form center">
-        <div>
+        <div className="form-element">
           <label className="toilet-label">Name</label>
           <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
         </div>
-        <div>
+        <div className="form-element">
           <label className="toilet-label">Description</label>
           <input type="textarea" name="description" value={this.state.description} onChange={this.handleChange} />
         </div>
-        <div>
+        <div className="form-element">
+          <select name="type" onChange={this.handleChange}>
+            <option value="1">1 - Unspeakable</option>
+            <option value="2">2 - Rather use the woods</option>
+            <option value="3">3 - Servicable</option>
+            <option value="4">4 - Suitable for children</option>
+            <option value="5">5 - Mom cleaned</option>
+          </select>
+        </div>
+        <div className="form-element">
           <label className="toilet-label">Rating</label>
           <input type="number" name="rating" value={this.state.rating} onChange={this.handleChange} />
         </div>
-        <div>
+        <div className="form-element">
           <Button bsStyle="success" onClick={this.handleSubmit}>Submit</Button>
         </div>
       </form>

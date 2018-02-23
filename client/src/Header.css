@@ -12,3 +12,7 @@ label.toilet-label {
   width: 6em;
   text-align: left;
 }
+
+div.form-element {
+  padding: 0.5em;
+}
