@@ -76,7 +76,8 @@ class ToiletForm extends Component {
           <input type="textarea" name="description" value={this.state.description} onChange={this.handleChange} />
         </div>
         <div className="form-element">
-          <select name="type" onChange={this.handleChange}>
+        <label className="toilet-label">Rating</label>
+          <select name="rating" onChange={this.handleChange} value={this.state.rating}>
             <option value="1">1 - Unspeakable</option>
             <option value="2">2 - Rather use the woods</option>
             <option value="3">3 - Servicable</option>
@@ -85,8 +86,13 @@ class ToiletForm extends Component {
           </select>
         </div>
         <div className="form-element">
-          <label className="toilet-label">Rating</label>
-          <input type="number" name="rating" value={this.state.rating} onChange={this.handleChange} />
+          <label className="toilet-label">Type</label>
+          <select name="toilet_type" onChange={this.handleChange} value={this.state.toilet_type}>
+            <option value="portapotty">Portapotty</option>
+            <option value="public">Public</option>
+            <option value="outhouse">Outhouse</option>
+            <option value="store">Store</option>
+          </select>
         </div>
         <div className="form-element">
           <Button bsStyle="success" onClick={this.handleSubmit}>Submit</Button>

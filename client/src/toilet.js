@@ -5,7 +5,7 @@ function Toilet(params) {
   this.lat          = params.lat;
   this.lng          = params.lng;
   this.toilet_type  = params.toilet_type;
-  this.rating       = params.average_rating;
+  this.rating       = params.average_rating ? params.average_rating : params.rating;
 }
 
 
