@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   scope '/api' do
     resources :toilets, only: [:index, :create]
+    resources :reviews, only: [:create]
   end
 end

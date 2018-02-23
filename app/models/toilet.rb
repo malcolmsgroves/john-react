@@ -14,7 +14,7 @@ class Toilet < ApplicationRecord
     if(reviews.empty?)
       "No reviews"
     else
-      self.reviews.average(:rating)
+      self.reviews.average(:rating).round(1)
     end
   end
 end

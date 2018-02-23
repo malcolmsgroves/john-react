@@ -6,6 +6,7 @@ function Toilet(params) {
   this.lng          = params.lng;
   this.toilet_type  = params.toilet_type;
   this.rating       = params.average_rating ? params.average_rating : params.rating;
+  this.id           = params.id;
 }
 
 

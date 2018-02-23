@@ -76,7 +76,7 @@ class ToiletForm extends Component {
           <input type="textarea" name="description" value={this.state.description} onChange={this.handleChange} />
         </div>
         <div className="form-element">
-        <label className="toilet-label">Rating</label>
+          <label className="toilet-label">Rating</label>
           <select name="rating" onChange={this.handleChange} value={this.state.rating}>
             <option value="1">1 - Unspeakable</option>
             <option value="2">2 - Rather use the woods</option>
